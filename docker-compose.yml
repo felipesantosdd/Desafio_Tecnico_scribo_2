@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=22143829
+    ports:
+      - "3001:5432"
+
+  # app:
+  #   build: .
+  #   command: npm start
+  #   # restart: always
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - .:/usr/app
