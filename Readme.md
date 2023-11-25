@@ -10,12 +10,13 @@ Esta é uma API RESTful desenvolvida para autenticação de usuários, permitind
 2. **Clone o Repositório:**
 
    ```bash
-   git clone https://github.com/felipesantosdd/Desafio_Tecnico_scribo_1.git
-   cd Desafio_Tecnico_scribo_1
+   git clone https://github.com/felipesantosdd/Desafio_Tecnico_scribo_2.git
+   cd Desafio_Tecnico_scribo_2
    ```
 
 3. **Execução:**
-   Inicie o servidor PostgreSQL com o comando:
+   Inicie o container PostgreSQL com o comando:
+   O arquivo .env, esta configurado com as variaveis de ambiente para o container docker
 
    ```bash
    docker-compose up
@@ -69,4 +70,4 @@ não é possivel ter dois usuarios com o mesmo email.
 
 ### 3. users/profile (Buscar Usuário)
 
-Os usuários logados terão acesso apenas ao seu perfil. Não é necessário passar o ID, apenas o token, pois nele já está salvo o ID. Essa requisição deve usar o token de acesso fornecido na criação do usuário ou login.
+Os usuários logados terão acesso apenas ao seu perfil. Não é necessário passar o ID, apenas o token recebido no login ou na criação do cadastro.
