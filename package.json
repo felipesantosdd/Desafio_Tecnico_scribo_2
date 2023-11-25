@@ -7,7 +7,7 @@
     "test": "vitest",
     "start": "tsx src/server.ts",
     "dev": "tsx watch src/server.ts",
-    "build": "tsup src",
+    "build": "npx tsc",
     "typeorm": "typeorm-ts-node-commonjs"
   },
   "keywords": [],
