@@ -19,9 +19,15 @@ async function ensureAuthMiddleware(
 
     jwt.verify(token, process.env.SECRET_KEY, (error, decoded: any) => {
         if (error) {
-            return response.status(401).json({
-                message: error.message,
-            });
+            if (error.name === "TokenExpiredError") {
+                return response.status(401).json({
+                    message: "Sessão invalálida.",
+                });
+            } else {
+                return response.status(401).json({
+                    message: error.message,
+                });
+            }
         }
 
         request.user = {
